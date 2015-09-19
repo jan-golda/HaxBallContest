@@ -45,7 +45,7 @@ public class Server extends ContestServer implements Command {
     	
         //TODO: password check
     	
-    	users.put(client, new User(args[0]));
+    	users.put(client, new User(args[0], client));
         
         client.send("OK\n");
 	}
