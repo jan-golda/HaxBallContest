@@ -28,6 +28,7 @@ public class Server extends ContestServer implements Command {
 	private void registerErrors(){
 		cmdHandler.addError(200, "user already connected");
 		cmdHandler.addError(201, "already logged in");
+		cmdHandler.addError(202, "authorization required");
 	}
 	
 	@Override
