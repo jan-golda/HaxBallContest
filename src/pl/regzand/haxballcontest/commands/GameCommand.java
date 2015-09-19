@@ -21,10 +21,10 @@ public abstract class GameCommand implements Command {
 		if(user==null)
 			throw new CommandException(202);
 		
-		handleGameCommand(client, user, args);
+		handleGameCommand(user, args);
 	}
 	
-	public abstract void handleGameCommand(Client client, User user, String[] args) throws CommandException;
+	public abstract void handleGameCommand(User user, String[] args) throws CommandException;
 
     public void checkArguments(String[] args, int min, int max) throws CommandException{
         if(args.length < min || args.length > max)
