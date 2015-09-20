@@ -51,11 +51,14 @@ public class Server extends ContestServer implements Command {
     	users.put(client, new User(args[0], client));
         
         client.send("OK\n");
+        System.out.println("User '"+args[0]+"' joined");
 	}
 	
 	@Override
     protected void onClientDisconnect(Client client) {
-        users.remove(client);
+        User u = users.remove(client);
+        if(u!=null)
+        	System.out.println("User '"+u.getName()+"' left");
     }
 	
 	public User getUser(Client client){
