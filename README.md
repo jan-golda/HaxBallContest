@@ -5,6 +5,7 @@ Real time HaxBall like contest game
 | Command  | Response | Errors |
 | -------- | ---------- | -------- | ------ |
 | `LOGIN <username>` | `OK` | `200` `201` |
+| `JOIN` | `OK` then `OK` | `300` |
 
 ## Errors
 | Code  | Description |
