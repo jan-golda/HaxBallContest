@@ -8,7 +8,7 @@ import pl.regzand.haxballcontest.User;
 
 public abstract class GameCommand implements Command {
 	
-	private final Server server;
+	protected final Server server;
 
 	public GameCommand(Server server) {
 		this.server = server;
