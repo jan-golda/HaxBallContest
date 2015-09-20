@@ -33,6 +33,7 @@ public class JoinCommand extends GameCommand {
 		while(queue.size()>=2){
 			User u1 = queue.remove();
 			User u2 = queue.remove();
+			System.out.println("Starting new game for '"+u1.getName()+"' and '"+u2.getName()+"'");
 			new Game(u1, u2);
 			u1.send("OK\n");
 			u2.send("OK\n");
