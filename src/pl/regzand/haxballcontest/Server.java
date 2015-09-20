@@ -7,6 +7,7 @@ import pl.regzand.contestserver.Client;
 import pl.regzand.contestserver.Command;
 import pl.regzand.contestserver.CommandException;
 import pl.regzand.contestserver.ContestServer;
+import pl.regzand.haxballcontest.commands.JoinCommand;
 
 public class Server extends ContestServer implements Command {
 	
@@ -23,12 +24,14 @@ public class Server extends ContestServer implements Command {
 	
 	private void registerCommands(){
 		cmdHandler.addCommand("LOGIN",		this);
+		cmdHandler.addCommand("JOIN",		new JoinCommand(this));
 	}
 	
 	private void registerErrors(){
 		cmdHandler.addError(200, "user already connected");
 		cmdHandler.addError(201, "already logged in");
 		cmdHandler.addError(202, "authorization required");
+		cmdHandler.addError(300, "already in game");
 	}
 	
 	@Override

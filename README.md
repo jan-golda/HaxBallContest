@@ -16,3 +16,4 @@ Real time HaxBall like contest game
 | `200` | user already connected |
 | `201` | already logged in |
 | `202` | authorization required |
+| `300` | already in game |
